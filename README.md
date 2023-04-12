@@ -3,8 +3,9 @@
 This is a Swift Package for integrating the Google Interactive Media Ads (IMA) SDK
 into your iOS or tvOS project using Swift.
 
+## Shasum
+
 ```
-// Shasum
 c83456ee1cffac2040fb6c7526f7bc2cbbbc8eae309f7daab99c46d52da2d9c7
 ```
 
