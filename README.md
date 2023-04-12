@@ -5,12 +5,12 @@ into your iOS or tvOS project using Swift.
 
 ```
 // Shasum
-74fb63f266900bdc3e7f1d1b2d0f3fc8cb247924f9d35b54eb4ca65a3d9697fe
+c83456ee1cffac2040fb6c7526f7bc2cbbbc8eae309f7daab99c46d52da2d9c7
 ```
 
 ## Current supported version:
 
-iOS: `3.18.4`
+iOS: `3.18.5`
 
 tvOS: `4.8.2`
 
