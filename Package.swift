@@ -1,12 +1,12 @@
-// swift-tools-version: 5.4
+// swift-tools-version: 5.6
 
 import PackageDescription
 
 let package = Package(
     name: "GoogleInteractiveMediaAds",
     platforms: [
-        .iOS(.v11),
-        .tvOS(.v11),
+        .iOS(.v14),
+        .tvOS(.v14),
     ],
     products: [
         .library(

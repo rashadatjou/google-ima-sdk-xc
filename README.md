@@ -1,6 +1,6 @@
 # Unofficial Combined Google IMA SDK iOS and tvOS
 
-This is a project adds suppot for multiplatform XCFramework, Swift Package and CocoaPods to the Google Interactive Media Ads (IMA) SDK.
+This is a project adds support for multi-platform XCFramework, Swift Package and CocoaPods to the Google Interactive Media Ads (IMA) SDK.
 
 ## Checksum
 
@@ -16,8 +16,9 @@ tvOS: `4.8.2`
 
 ## Getting Started
 
-To use this Swift Package in your Xcode project, follow these steps:
+### Swift Package Manager
 
+To use this Swift Package in your Xcode project, follow these steps:
 
 1. Open your project in Xcode.
 2. Go to File > Swift Packages > Add Package Dependency.
@@ -31,6 +32,19 @@ import GoogleInteractiveMediaAds
 ```
 
 7. You're now ready to use the IMA SDK in your app!
+
+### CocoaPods
+
+To use this Pod in your Xcode project, follow these steps:
+
+1. Open your Podfile
+2. Add the following code to it:
+
+```ruby
+pod `GoogleInteractiveMediaAdsXC`
+```
+
+3. Run `pod install` in your terminal.
 
 ## Resources
 
