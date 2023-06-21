@@ -1,7 +1,6 @@
-# Unofficial Google IMA iOS and tvOS Swift Package
+# Unofficial Combined Google IMA SDK iOS and tvOS
 
-This is a Swift Package for integrating the Google Interactive Media Ads (IMA) SDK
-into your iOS or tvOS project using Swift.
+This is a project adds suppot for multiplatform XCFramework, Swift Package and CocoaPods to the Google Interactive Media Ads (IMA) SDK.
 
 ## Checksum
 
