@@ -12,7 +12,7 @@ This is a project adds support for multi-platform XCFramework, Swift Package and
 
 iOS: `3.19.1`
 
-tvOS: `4.8.2`
+tvOS: `4.9.2`
 
 ## Getting Started
 

@@ -1,4 +1,4 @@
-version = "1.2.0"
+version = "1.3.0"
 sourceURL = "https://github.com/rashadatjou/google-ima-sdk-xc/releases/download/#{version}/GoogleInteractiveMediaAds.zip"
 
 Pod::Spec.new do |s|
