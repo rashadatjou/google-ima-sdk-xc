@@ -5,7 +5,7 @@ This is a project adds support for multi-platform XCFramework, Swift Package and
 ## Checksum
 
 ```
-549a197cedcbf66c8ef1544dec6b839c5fd268461ea5cf9fa5a1a55f3d6f27f0
+5f7afb56bd88087a73fa2ffe6700ad0bb6c7cc43db4ffe607d42ad0d4faab170
 ```
 
 ## Current supported version:
