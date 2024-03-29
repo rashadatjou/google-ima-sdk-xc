@@ -53,4 +53,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create --title "Update GoogleInteractiveMediaAds.zip" --body "This PR updates the GoogleInteractiveMediaAds.zip with iOS: `${{ github.event.inputs.arg1 }}` and tvOS: `${{ github.event.inputs.arg2 }}` Checksum: `${{ env.CHECKSUM }}`" --head update-ios-${{github.event.inputs.arg1}}-tvos-${{github.event.inputs.arg2}} --base main
+          gh pr create --title "Update GoogleInteractiveMediaAds.zip" --body "This PR updates the GoogleInteractiveMediaAds.zip with iOS: ${{ github.event.inputs.arg1 }} and tvOS: ${{ github.event.inputs.arg2 }} Checksum: ${{ env.CHECKSUM }}" --head update-ios-${{github.event.inputs.arg1}}-tvos-${{github.event.inputs.arg2}} --base main
