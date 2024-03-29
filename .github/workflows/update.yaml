@@ -13,7 +13,7 @@ on:
         default: ""
 
 jobs:
-  run-script-and-handle-output:
+  run-updater:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -28,6 +28,7 @@ jobs:
 
       - name: Move Zip to Resources Directory
         run: |
+          rm -rf ./Resources
           mkdir -p ./Resources
           mv GoogleInteractiveMediaAds.zip ./Resources/GoogleInteractiveMediaAds.zip
 
@@ -38,14 +39,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout -b update-ios-${{github.event.inputs.arg1}}-tvos-${{github.event.inputs.arg2}}
           git add ./Resources/GoogleInteractiveMediaAds.zip
           git commit -m "Add GoogleInteractiveMediaAds.zip to Resources"
-          # If no changes are detected, the commit step will fail. This can be handled or ignored based on your preference.
-
-      - name: Create Pull Request
-        uses: repo-sync/pull-request@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Update GoogleInteractiveMediaAds.zip"
-          pr_body: "iOS: ${{ github.event.inputs.arg1 }}\ntvOS: ${{ github.event.inputs.arg2 }}"
-          pr_branch: "update-googleinteractiveads-$(date +'%Y%m%d%H%M%S')"
+          git push
