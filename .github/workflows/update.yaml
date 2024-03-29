@@ -32,6 +32,11 @@ jobs:
           mkdir -p ./Resources
           mv GoogleInteractiveMediaAds.zip ./Resources/GoogleInteractiveMediaAds.zip
 
+      - name: Generate Checksum
+        id: checksum
+        run: |
+          echo "CHECKSUM=$(sha256sum ./Resources/GoogleInteractiveMediaAds.zip | awk '{print $1}')" >> $GITHUB_ENV
+
       - name: Delete .release Directory
         run: rm -rf ./.release
 
@@ -48,4 +53,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create --title "Update GoogleInteractiveMediaAds.zip" --body "This PR updates the GoogleInteractiveMediaAds.zip with iOS: `${{ github.event.inputs.arg1 }}` and tvOS: `${{ github.event.inputs.arg2 }}`." --head update-ios-${{github.event.inputs.arg1}}-tvos-${{github.event.inputs.arg2}} --base main
+          gh pr create --title "Update GoogleInteractiveMediaAds.zip" --body "This PR updates the GoogleInteractiveMediaAds.zip with iOS: `${{ github.event.inputs.arg1 }}` and tvOS: `${{ github.event.inputs.arg2 }}` Checksum: `${{ env.CHECKSUM }}`" --head update-ios-${{github.event.inputs.arg1}}-tvos-${{github.event.inputs.arg2}} --base main
