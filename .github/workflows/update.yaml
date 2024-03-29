@@ -1,0 +1,51 @@
+name: Update Google IMA Merged
+
+on:
+  workflow_dispatch:
+    inputs:
+      arg1:
+        description: "iOS Version"
+        required: true
+        default: ""
+      arg2:
+        description: "tvOS Version"
+        required: true
+        default: ""
+
+jobs:
+  run-script-and-handle-output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run the Updater with Arguments
+        run: bash ./Tools/update.bash "${{ github.event.inputs.arg1 }}" "${{ github.event.inputs.arg2 }}"
+
+      - name: Zip the XCFramework
+        run: |
+          zip -r GoogleInteractiveMediaAds.zip ./.release/Product/GoogleInteractiveMediaAdsMerged.xcframework
+
+      - name: Move Zip to Resources Directory
+        run: |
+          mkdir -p ./Resources
+          mv GoogleInteractiveMediaAds.zip ./Resources/GoogleInteractiveMediaAds.zip
+
+      - name: Delete .release Directory
+        run: rm -rf ./.release
+
+      - name: Commit Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ./Resources/GoogleInteractiveMediaAds.zip
+          git commit -m "Add GoogleInteractiveMediaAds.zip to Resources"
+          # If no changes are detected, the commit step will fail. This can be handled or ignored based on your preference.
+
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Update GoogleInteractiveMediaAds.zip"
+          pr_body: "iOS: ${{ github.event.inputs.arg1 }}\ntvOS: ${{ github.event.inputs.arg2 }}"
+          pr_branch: "update-googleinteractiveads-$(date +'%Y%m%d%H%M%S')"
