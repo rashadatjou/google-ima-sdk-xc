@@ -42,4 +42,4 @@ jobs:
           git checkout -b update-ios-${{github.event.inputs.arg1}}-tvos-${{github.event.inputs.arg2}}
           git add ./Resources/GoogleInteractiveMediaAds.zip
           git commit -m "Add GoogleInteractiveMediaAds.zip to Resources"
-          git push
+          git push -u origin update-ios-${{github.event.inputs.arg1}}-tvos-${{github.event.inputs.arg2}}
