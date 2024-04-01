@@ -54,7 +54,7 @@ unzip -q "$DOWNLOADS_DIR/$FRAMEWORK_TVOS.zip" -d "$RELEASE_DIR"
 mv "$RELEASE_DIR/$FRAMEWORK_NAME.xcframework" $RELEASE_DIR/$FRAMEWORK_TVOS
 
 # Step 3: Prepare new XCFramework structure
-MERGED_XCFRAMEWORK_DIR="$PRODUCT_DIR/GoogleInteractiveMediaAdsMerged.xcframework"
+MERGED_XCFRAMEWORK_DIR="$PRODUCT_DIR/$FRAMEWORK_NAME.xcframework"
 mkdir -p "$MERGED_XCFRAMEWORK_DIR"
 
 # Step 4: Copy the individual frameworks into the new structure

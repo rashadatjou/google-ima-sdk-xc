@@ -24,7 +24,10 @@ jobs:
 
       - name: Zip the XCFramework
         run: |
-          zip -r GoogleInteractiveMediaAds.zip ./.release/Product/GoogleInteractiveMediaAdsMerged.xcframework
+          cd ./.release/Product/
+          zip -r GoogleInteractiveMediaAds.zip GoogleInteractiveMediaAds.xcframework
+          mv GoogleInteractiveMediaAds.zip ../../.
+          cd -
 
       - name: Move Zip to Resources Directory
         run: |
