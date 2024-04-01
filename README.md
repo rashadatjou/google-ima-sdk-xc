@@ -5,14 +5,14 @@ This is a project adds support for multi-platform XCFramework, Swift Package and
 ## Checksum
 
 ```
-5f7afb56bd88087a73fa2ffe6700ad0bb6c7cc43db4ffe607d42ad0d4faab170
+e66013b366cca686e3199fd50c38ef439ceb7912ab1233ca37d515297632dbae
 ```
 
 ## Current supported version:
 
-iOS: `3.19.1`
+iOS: `3.20.0`
 
-tvOS: `4.9.2`
+tvOS: `4.11.1`
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ To use this Swift Package in your Xcode project, follow these steps:
 
 1. Open your project in Xcode.
 2. Go to File > Swift Packages > Add Package Dependency.
-3. Enter the URL of this repository https://github.com/rashadatjou/swift-google-ima-spm.git and click Next.
+3. Enter the URL of this repository https://github.com/rashadatjou/google-ima-sdk-xc and click Next.
 4. Choose the version rule you want to use (e.g. "Up to Next Major") and click Next.
 5. Select the target you want to add the package to and click Finish.
 6. Import the GoogleInteractiveMediaAds module in your Swift files where you want to use the IMA SDK.
