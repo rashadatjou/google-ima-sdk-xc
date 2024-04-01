@@ -1,6 +1,6 @@
 # Unofficial Combined Google IMA SDK iOS and tvOS
 
-This is a project adds support for multi-platform XCFramework, Swift Package and CocoaPods to the Google Interactive Media Ads (IMA) SDK.
+This is a project adds support for multi-platform XCFramework, Swift Package and CocoaPods to the Google Interactive Media Ads (IMA) SDK. Due to the reason that both of these frameworks where built from the same source but have been separated into different frameworks that share the same name it is trivial to put them back together. Multi-platform projects will benefit from this variant of the IMA SDK.
 
 ## Checksum
 
@@ -10,9 +10,9 @@ e66013b366cca686e3199fd50c38ef439ceb7912ab1233ca37d515297632dbae
 
 ## Current supported version:
 
-iOS: `3.20.0`
+iOS: `3.20.0` – [Google Release](https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/download)
 
-tvOS: `4.11.1`
+tvOS: `4.11.1` – [Google Release](https://developers.google.com/interactive-media-ads/docs/sdks/tvos/client-side/download)
 
 ## Getting Started
 
