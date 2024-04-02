@@ -1,6 +1,6 @@
 # Unofficial Combined Google IMA SDK iOS and tvOS
 
-This is a project adds support for multi-platform XCFramework, Swift Package and CocoaPods to the Google Interactive Media Ads (IMA) SDK. Due to the reason that both of these frameworks where built from the same source but have been separated into different frameworks that share the same name it is trivial to put them back together. Multi-platform projects will benefit from this variant of the IMA SDK.
+This project adds support for multi-platform XCFramework, Swift Package, and CocoaPods to the Google Interactive Media Ads (IMA) SDK. Due to the fact that both of the Google IMA iOS SDK and the Google IMA tvOS SDK were built from the same source but have been separated into different XCFrameworks that share the same name, it is possible to use them combined inside of a single XCFramework. Multi-platform projects will benefit from this variant of the IMA SDK.
 
 ## Checksum
 
